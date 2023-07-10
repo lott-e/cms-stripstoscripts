@@ -37,6 +37,12 @@ export const Posts: CollectionConfig = {
   },
   fields: [
     {
+      name: 'topic', // required
+      type: 'relationship', // required
+      relationTo: 'categories', // required
+      hasMany: false,
+    },
+    {
       name: 'title',
       type: 'text',
       required: true,

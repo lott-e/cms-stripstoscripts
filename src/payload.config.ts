@@ -52,9 +52,9 @@ export default buildConfig({
   },
   ...(process.env.PAYLOAD_PUBLIC_SITE_URL
     ? {
-        cors: [process.env.PAYLOAD_PUBLIC_SITE_URL].filter(Boolean),
-        csrf: [process.env.PAYLOAD_PUBLIC_SITE_URL].filter(Boolean),
-      }
+      cors: [process.env.PAYLOAD_PUBLIC_SITE_URL].filter(Boolean),
+      csrf: [process.env.PAYLOAD_PUBLIC_SITE_URL].filter(Boolean),
+    }
     : {}),
   plugins: [
     FormBuilder({
@@ -68,11 +68,11 @@ export default buildConfig({
     redirects({
       collections: ['pages', 'posts'],
     }),
-    seo({
-      collections: ['pages', 'posts'],
-      generateTitle,
-      uploadsCollection: 'media',
-    }),
+    // seo({
+    //   collections: ['pages', 'posts'],
+    //   generateTitle,
+    //   uploadsCollection: 'media',
+    // }),
     payloadCloud(),
   ],
 })

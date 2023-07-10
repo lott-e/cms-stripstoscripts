@@ -10,6 +10,12 @@ const Categories: CollectionConfig = {
   },
   fields: [
     {
+      name: 'posts', // required
+      type: 'relationship', // required
+      relationTo: 'posts', // required
+      hasMany: true,
+    },
+    {
       name: 'title',
       type: 'text',
     },
